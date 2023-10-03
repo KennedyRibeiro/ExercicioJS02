@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html lang="pt-br" data-bs-theme="light">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Exercício de Fixação</title>
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="../bootstrap-5.3.0-dist/css/bootstrap.min.css">
+</head>
+
+<body id="corpo">
+	<div class="container mt-4">
+
+		<h1 class="text-center mb-4">Exercícios de Fixação e Revisão</h1>
+
+		<!-- Exercício 1 - Mensagem de boas vindas -->
+		<div class="container exercicio-2">
+			<hr class="mt-4" />
+			<h2>Exercício 1 - Trocar cor de fundo</h2>
+			<hr class="mb-4" />
+			<p>
+				Troque a cor de fundo da página de acordo com a cor selecionada no campo a seguir. Caso não selecionar
+				nenhuma cor, deverá voltar para o plano de fundo na cor branca (#FFFFFF)
+				<br>
+				Para trocar a cor de fundo utilize o código: <strong>fundo.style.backgroundColor = cor</strong>
+			</p>
+			<form action="" class="row">
+				<div class="col-md-4">
+					<label for="cor">Cor de fundo:</label>
+					<select name="cor" id="cor" class="form-select">
+						<option value="">Selecione uma opção</option>
+						<option value="#52b3d9">Azul</option>
+						<option value="#66cc99">Verde</option>
+						<option value="#bdc3c7">Cinza</option>
+					</select>
+				</div>
+			</form>
+			<div class="col-md-12 mt-4">
+				<button class="btn btn-success" id="botao-trocar-cor">Trocar cor</button>
+			</div>
+		</div>
+
+		<!-- Exercício 2 - Impressão de números -->
+		<div class="container exercicio-2">
+			<hr class="mt-4" />
+			<h2>Exercício 2 - Nota Bimestral</h2>
+			<hr class="mb-4" />
+			<p>
+				Crie uma lista com os alunos e suas notas que foram inseridas nos campos correspondentes do cadastro. A lista deve mostrar o nome do aluno, as notas parciais e a soma bimestral do aluno. Se a nota bimestral do aluno for menor que 70 pontos, a coluna de análise deve mostrar o texto "Abaixo da média" escrito em vermelho (class="text-danger"). Do contário, mostrar o texto "Acima da média" escrito na cor verde (class="text-success").
+				As notas só podem ser cadastradas se todos os campos estiverem preenchidos, do contrário deverá ser exibido um alerta informando a necessidade de preencher todos os campos.
+			</p>
+			<form action="" class="row">
+				<div class="col-md-6">
+					<label for="aluno">Aluno:</label>
+					<input type="text" class="form-control" id="aluno" name="aluno" placeholder="Nome do aluno">
+				</div>
+				<div class="col-md-2">
+					<label for="nota-avaliacao-mensal">Av. Mens. (20pts):</label>
+					<input type="number" class="form-control" id="nota-avaliacao-mensal" name="nota-avaliacao-mensal" placeholder="Nota Av. Mens.">
+				</div>
+				<div class="col-md-2">
+					<label for="nota-avaliacao-bimestral">Av. Bim. (50pts):</label>
+					<input type="number" class="form-control" id="nota-avaliacao-bimestral" name="nota-avaliacao-bimestral" placeholder="Nota Av. Bim.">
+				</div>
+				<div class="col-md-2">
+					<label for="nota-avaliacao-continua">Av. Cont. (30pts):</label>
+					<input type="number" class="form-control" id="nota-avaliacao-continua" name="nota-avaliacao-continua" placeholder="Nota Av. Cont.">
+				</div>
+			</form>
+			<div class="col-md-12 mt-4 mb-4">
+				<button class="btn btn-success" id="botao-cadastrar-notas">Cadastrar notas</button>
+			</div>
+			<div id="notas">
+				<table class="table" id="tabela-notas">
+					<thead>
+						<tr>
+							<th scope="col">Aluno</th>
+							<th scope="col">Avaliação Mensal</th>
+							<th scope="col">Avaliação Bimestral</th>
+							<th scope="col">Avaliação Contínua</th>
+							<th scope="col">Nota Bimestral</th>
+							<th scope="col">Situação da Nota</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+			<br>
+		</div>
+
+		<!-- Exercício 3 - Impressão de números -->
+		<div class="container exercicio-2">
+			<hr class="mt-4" />
+			<h2>Exercício 3 - Impressão de números</h2>
+			<hr class="mb-4" />
+			<p>
+				Dado um número inteiro inicial e um número inteiro final, imprimir todos os números compreendidos na faixa (inclusive os extremos), indicando se o mesmo é par ou ímpar e mostrando seu antecessor e sucessor.
+
+			</p>
+			<form action="" class="row">
+				<div class="col-md-4">
+					<label for="numero-inicial">Número inicial:</label>
+					<input type="number" class="form-control" id="numero-inicial" name="numero-inicial"
+						placeholder="Número inicial">
+				</div>
+				<div class="col-md-4">
+					<label for="numero-final">Número Final:</label>
+					<input type="number" class="form-control" id="numero-final" name="numero-final"
+						placeholder="Número final">
+				</div>
+			</form>
+			<div class="col-md-12 mt-4 mb-4">
+				<button class="btn btn-success" id="botao-gerar-numeros">Gerar números</button>
+			</div>
+			<div id="numeros">
+				<table class="table" id="tabela-numeros">
+					<thead>
+						<tr>
+							<th scope="col">Número</th>
+							<th scope="col">Par ou ímpar</th>
+							<th scope="col">Antecessor</th>
+							<th scope="col">Sucessor</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+			<br>
+		</div>
+	</div>
+
+	<!--<script src="../js/index.js"></script>-->>
+	<script src="../js/index.js"></script>
+</body>
+
+</html>
